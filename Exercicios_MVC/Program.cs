@@ -25,5 +25,6 @@ app.MapControllerRoute(
         pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
-
+// Obrigatório para quando alteramos as rotas padrão
+app.MapControllers();
 app.Run();

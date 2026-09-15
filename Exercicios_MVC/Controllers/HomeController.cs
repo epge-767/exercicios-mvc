@@ -38,6 +38,14 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpGet("/Home/Soma/{a}/{b}")]
+    public IActionResult Soma(int a, int b)
+    {
+        ViewBag.A = a;
+        ViewBag.B = b;
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None,
         NoStore = true)]
     public IActionResult Error()

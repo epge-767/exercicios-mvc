@@ -22,6 +22,22 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Idade(int id)
+    {
+        // Validações
+        if (id < 0 || id == 0 || id > DateTime.Now.Year || id < DateTime.Now.Year - 200)
+        {
+            // Se alguma das validções for inválidas vou provocar um erro. Para erro vamos sempre 
+            // utilizar o -1 para inteiros.
+            ViewBag.Idade = -1;
+        }
+        else
+        {
+            ViewBag.Idade = DateTime.Now.Year - id;
+        }
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None,
         NoStore = true)]
     public IActionResult Error()

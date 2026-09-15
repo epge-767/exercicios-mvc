@@ -1,1 +1,10 @@
-<h1>Olá, o meu nome é Gonçalo Costa</h1>
+@{
+    if(ViewBag.Nome != null)
+    {
+        <h1>Olá, @ViewBag.Nome.</h1>
+    }
+    else
+    {
+        <h1>Olá, ainda não sei o teu nome.</h1>
+    }
+}

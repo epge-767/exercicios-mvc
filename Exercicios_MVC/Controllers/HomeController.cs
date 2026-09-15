@@ -16,8 +16,9 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Saudacao()
+    public IActionResult Saudacao(string id)
     {
+        ViewBag.Nome = id;
         return View();
     }
 
